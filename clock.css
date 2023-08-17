@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(114, 114, 182);
+    background-image: url('./assets/circulo.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0%;
+
+}
+
+header {
+    background-color: rgb(133, 129, 129, 0.5);
+    width: 100%;
+    height: 75px;
+    text-align: justify;
+    border: 4px;
+    border-style: solid;
+    border-color: rgb(80, 79, 79);
+    margin: 0%;
+    display: flex;
+    align-items: center;
+}
+
+form {
+    margin: 1%;
+    background-color: rgb(255, 255, 255, 0.2);
+    width: 360px;
+    text-align: center;
+}
+
+div {
+    height: 1000px;
+    width: 100%;
+    font-size: 170px;
+    text-align: center;
+    text-shadow: 4px -4px 4px rgb(87, 12, 12), 4px 4px 4px rgb(87, 12, 12), -4px -4px 4px rgb(87, 12, 12), -4px 4px 4px rgb(87, 12, 12);
+    margin-top: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin-left: 2%;
+}
+
+h1 {
+    margin-left: 17%;
+    font-size: 50px;
+        text-shadow: -1px 1px 0 white;
+}
+
