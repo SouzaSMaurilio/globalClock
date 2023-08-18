@@ -1,6 +1,8 @@
 const form = document.querySelector('.form');
 const result = document.querySelector('.result');
 
+let intervalId;
+
 function clock(timeZone) {
     const date = new Date();
     const options = {
@@ -14,6 +16,14 @@ function recievesEvent(event) {
 
     const select = form.querySelector('select');
     let timeZone = 'UTC';
+
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
+
+    intervalId = setInterval(function () {
+        result.innerHTML = clock(timeZone);
+    }, 1000);
 
     if (select.value === 'Afghanistan') {
         timeZone = 'Asia/Kabul';
@@ -455,10 +465,7 @@ function recievesEvent(event) {
         timeZone = 'Africa/Harare';
     }
 
-    setInterval(function () {
-        const timeString = clock(timeZone);
-        result.innerHTML = timeString;
-    }, 1000);
+    result.innerHTML = clock(timeZone);
 }
 
 form.addEventListener('submit', recievesEvent);
